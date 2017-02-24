@@ -28,7 +28,7 @@
         <sv:value>hipposysedit:remodel</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>c571f3c1-6204-4bea-acb0-3e8f1eae8678</sv:value>
+        <sv:value>88deb9c4-e0cc-46e7-a6fd-1508a3594dfe</sv:value>
       </sv:property>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
         <sv:value>true</sv:value>
@@ -228,6 +228,29 @@
           <sv:value>String</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="geolocation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>myhippoproject:geolocation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>myhippoproject:Geolocation</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -242,10 +265,9 @@
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>c42ddf1e-8d56-4f34-bfbf-ae269326a6bc</sv:value>
+        <sv:value>baa8b751-000c-4685-9b77-ad9c81273809</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-      <sv:property sv:name="hippo:related___pathreference" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippostd:holder" sv:type="String">
         <sv:value>holder</sv:value>
       </sv:property>
@@ -273,6 +295,9 @@
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>document-type-locale</sv:value>
       </sv:property>
+      <sv:property sv:name="myhippoproject:author" sv:type="String">
+        <sv:value/>
+      </sv:property>
       <sv:property sv:name="myhippoproject:date" sv:type="Date">
         <sv:value>0001-01-01T13:00:00.000+01:00</sv:value>
       </sv:property>
@@ -280,6 +305,12 @@
         <sv:value>news</sv:value>
       </sv:property>
       <sv:property sv:name="myhippoproject:introduction" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="myhippoproject:location" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="myhippoproject:source" sv:type="String">
         <sv:value/>
       </sv:property>
       <sv:property sv:name="myhippoproject:title" sv:type="String">
@@ -290,7 +321,7 @@
           <sv:value>hippostd:html</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</sv:value>
+          <sv:value/>
         </sv:property>
       </sv:node>
       <sv:node sv:name="myhippoproject:image">
@@ -303,6 +334,17 @@
         <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+      <sv:node sv:name="myhippoproject:geolocation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>myhippoproject:Geolocation</sv:value>
+        </sv:property>
+        <sv:property sv:name="myhippoproject:latitude" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="myhippoproject:longitude" sv:type="String">
+          <sv:value/>
+        </sv:property>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -515,6 +557,31 @@
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>image</sv:value>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.right.item</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="geolocation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>Geolocation</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>geolocation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>

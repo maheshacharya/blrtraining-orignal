@@ -4,6 +4,9 @@
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
 <'myhippoproject'='http://www.onehippo.org/myhippoproject/nt/1.0'>
 
+[myhippoproject:Geolocation] > hippo:compound, hippostd:relaxed
+  orderable
+
 [myhippoproject:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
@@ -14,5 +17,8 @@
   orderable
 
 [myhippoproject:newsdocument] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
+  orderable
+
+[myhippoproject:product] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
   orderable
 

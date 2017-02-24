@@ -30,6 +30,12 @@
       <version>3.0.3</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.onehippo.cms7.training.essentials</groupId>
+      <artifactId>hst-javacomponents-feature</artifactId>
+      <version>3.0.3</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
   <build>
     <resources>
